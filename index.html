@@ -1,2128 +1,1688 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Vamsify Web & Digital Solutions</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description"
+content="Vamsify Web & Digital Solutions creates professional websites, e-commerce platforms, web applications and custom digital solutions for businesses.">
+
+<style>
 
-    <title>Vamsify Web & Digital Solutions</title>
+/* =========================
+   RESET
+========================= */
 
-    <meta name="description"
-          content="Vamsify Web & Digital Solutions creates modern websites, e-commerce platforms, web applications and custom digital solutions.">
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
 
-    <style>
+body{
+    font-family:Inter,Arial,Helvetica,sans-serif;
+    color:#172033;
+    background:#ffffff;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    max-width:100%;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
 
-        /* =====================================================
-           RESET
-        ===================================================== */
+    background:rgba(255,255,255,.94);
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid #e9eef5;
+}
+
+.nav-container{
+    max-width:1200px;
+    height:76px;
+    margin:auto;
+    padding:0 25px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+
+/* LOGO */
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            color: #172033;
-            background: #f7f9fc;
-            line-height: 1.6;
-        }
+.logo-box{
+    width:52px;
+    height:52px;
 
-        a {
-            text-decoration: none;
-        }
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
+    background:#ffffff;
+    border:1px solid #e2e8f0;
+    border-radius:12px;
 
-        /* =====================================================
-           NAVBAR
-        ===================================================== */
+    padding:5px;
 
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
+    box-shadow:0 5px 20px rgba(15,23,42,.08);
+}
 
-            background: rgba(7, 18, 40, 0.94);
-            backdrop-filter: blur(15px);
+.logo-box img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+}
 
-            z-index: 1000;
+.logo-text{
+    font-size:22px;
+    font-weight:800;
+    color:#101828;
+}
 
-            border-bottom: 1px solid rgba(255,255,255,0.08);
-        }
+.logo-text span{
+    color:#1769e0;
+}
 
-        .nav-container {
-            max-width: 1250px;
-            margin: auto;
 
-            height: 78px;
+/* NAV LINKS */
 
-            padding: 0 25px;
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:32px;
+    list-style:none;
+}
 
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+.nav-links a{
+    font-size:14px;
+    font-weight:600;
+    color:#475467;
+    transition:.3s;
+}
 
+.nav-links a:hover{
+    color:#1769e0;
+}
 
-        /* =====================================================
-           BRAND
-        ===================================================== */
+.nav-button{
+    background:#1769e0;
+    color:white !important;
 
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 13px;
+    padding:11px 19px;
+    border-radius:7px;
+}
 
-            color: white;
-        }
+.nav-button:hover{
+    background:#1255b8;
+}
 
-        .brand-logo {
-            width: 58px;
-            height: 58px;
 
-            background: white;
+/* =========================
+   HERO
+========================= */
 
-            border-radius: 14px;
+.hero{
+    padding:150px 25px 100px;
+    background:
+        linear-gradient(
+            180deg,
+            #f8fbff 0%,
+            #ffffff 100%
+        );
+}
 
-            padding: 5px;
+.hero-container{
+    max-width:1200px;
+    margin:auto;
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:70px;
 
-            box-shadow:
-                0 0 0 2px rgba(255,255,255,0.12),
-                0 8px 25px rgba(0,0,0,0.25);
-        }
+    align-items:center;
+}
 
-        .brand-logo img {
-            width: 100%;
-            height: 100%;
 
-            object-fit: contain;
+/* HERO CONTENT */
 
-            border-radius: 10px;
-        }
+.hero-content{
+    max-width:680px;
+}
 
-        .brand-name {
-            font-size: 23px;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-        }
+.hero-tag{
+    display:inline-block;
 
-        .brand-name span {
-            color: #4da3ff;
-        }
+    padding:7px 13px;
+    margin-bottom:20px;
 
+    border-radius:30px;
 
-        /* =====================================================
-           NAVIGATION
-        ===================================================== */
+    background:#edf5ff;
+    color:#1769e0;
 
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 30px;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:1.8px;
+}
 
-            list-style: none;
-        }
+.hero h1{
+    font-size:64px;
+    line-height:1.08;
+    letter-spacing:-2px;
 
-        .nav-links a {
-            color: #dbe7f5;
+    color:#101828;
 
-            font-size: 15px;
-            font-weight: 600;
+    margin-bottom:22px;
+}
 
-            transition: 0.3s;
-        }
+.hero h1 span{
+    color:#1769e0;
+}
 
-        .nav-links a:hover {
-            color: #4da3ff;
-        }
+.hero-subtitle{
+    font-size:24px;
+    font-weight:600;
+    color:#344054;
 
-        .nav-contact {
-            padding: 10px 18px;
+    margin-bottom:18px;
+}
 
-            border: 1px solid #4da3ff;
+.hero-description{
+    max-width:620px;
 
-            border-radius: 8px;
+    color:#667085;
+    font-size:17px;
 
-            color: white !important;
-        }
+    margin-bottom:30px;
+}
 
-        .nav-contact:hover {
-            background: #2563eb;
-        }
 
+/* BUTTONS */
 
-        /* =====================================================
-           HERO
-        ===================================================== */
+.hero-buttons{
+    display:flex;
+    gap:13px;
+    flex-wrap:wrap;
+}
 
-        .hero {
-            min-height: 100vh;
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
 
-            padding: 150px 25px 90px;
+    padding:13px 23px;
 
-            position: relative;
+    border-radius:7px;
 
-            overflow: hidden;
+    font-size:14px;
+    font-weight:700;
 
-            background:
-                radial-gradient(
-                    circle at 15% 25%,
-                    rgba(37, 99, 235, 0.35),
-                    transparent 30%
-                ),
+    transition:.3s;
+}
 
-                radial-gradient(
-                    circle at 85% 70%,
-                    rgba(14, 165, 233, 0.20),
-                    transparent 30%
-                ),
+.btn-primary{
+    background:#1769e0;
+    color:white;
 
-                linear-gradient(
-                    135deg,
-                    #061226,
-                    #0b1d3a 55%,
-                    #07172f
-                );
+    box-shadow:0 10px 25px rgba(23,105,224,.2);
+}
 
-            color: white;
-        }
+.btn-primary:hover{
+    background:#1255b8;
+    transform:translateY(-2px);
+}
 
+.btn-secondary{
+    border:1px solid #d0d5dd;
+    color:#344054;
+    background:white;
+}
 
-        .hero::before {
-            content: "";
+.btn-secondary:hover{
+    border-color:#1769e0;
+    color:#1769e0;
+}
 
-            position: absolute;
 
-            width: 500px;
-            height: 500px;
+/* HERO LOGO */
 
-            border: 1px solid rgba(77,163,255,0.12);
+.hero-visual{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
 
-            border-radius: 50%;
+.logo-display{
+    width:380px;
+    height:380px;
 
-            right: -200px;
-            top: 100px;
-        }
+    background:white;
 
+    border-radius:30px;
 
-        .hero-container {
-            max-width: 1200px;
-            margin: auto;
+    border:1px solid #e4eaf2;
 
-            min-height: 70vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-            display: grid;
+    padding:35px;
 
-            grid-template-columns: 1.15fr 0.85fr;
+    box-shadow:
+        0 25px 70px rgba(15,23,42,.10);
+}
 
-            gap: 60px;
+.logo-display img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+}
 
-            align-items: center;
-        }
 
+/* =========================
+   TRUST BAR
+========================= */
 
-        /* =====================================================
-           HERO TEXT
-        ===================================================== */
+.trust{
+    border-top:1px solid #edf0f5;
+    border-bottom:1px solid #edf0f5;
 
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
+    background:#ffffff;
+}
 
-        .hero-label {
-            display: inline-block;
+.trust-container{
+    max-width:1200px;
+    margin:auto;
 
-            padding: 8px 15px;
+    min-height:110px;
 
-            margin-bottom: 22px;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
 
-            border: 1px solid rgba(77,163,255,0.4);
+    gap:20px;
+    padding:20px 25px;
+}
 
-            background: rgba(77,163,255,0.08);
+.trust-item{
+    text-align:center;
+}
 
-            border-radius: 30px;
+.trust-item strong{
+    display:block;
+    font-size:18px;
+    color:#101828;
+}
 
-            color: #72b8ff;
+.trust-item span{
+    font-size:13px;
+    color:#667085;
+}
 
-            font-size: 13px;
 
-            font-weight: 700;
+/* =========================
+   GENERAL SECTION
+========================= */
 
-            letter-spacing: 2px;
-        }
+.section{
+    padding:100px 25px;
+}
 
-        .hero h1 {
-            font-size: 68px;
+.container{
+    max-width:1200px;
+    margin:auto;
+}
 
-            line-height: 1.05;
+.section-head{
+    max-width:700px;
+    margin:0 auto 55px;
+    text-align:center;
+}
 
-            letter-spacing: -2px;
+.section-label{
+    color:#1769e0;
 
-            margin-bottom: 22px;
-        }
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:2px;
 
-        .hero h1 span {
-            color: #4da3ff;
-        }
+    text-transform:uppercase;
 
-        .hero-subtitle {
-            font-size: 28px;
+    margin-bottom:10px;
+}
 
-            color: #e3edf9;
+.section-head h2{
+    font-size:42px;
+    line-height:1.2;
 
-            font-weight: 600;
+    color:#101828;
 
-            margin-bottom: 20px;
-        }
+    margin-bottom:14px;
+}
 
-        .hero-description {
-            max-width: 650px;
+.section-head p{
+    color:#667085;
+    font-size:16px;
+}
 
-            color: #aebed3;
 
-            font-size: 18px;
+/* =========================
+   SERVICES
+========================= */
 
-            line-height: 1.8;
+.services{
+    background:#f8fafc;
+}
 
-            margin-bottom: 35px;
-        }
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
 
+.service-card{
+    background:white;
 
-        /* =====================================================
-           HERO BUTTONS
-        ===================================================== */
+    border:1px solid #e6eaf0;
 
-        .hero-buttons {
-            display: flex;
+    border-radius:14px;
 
-            gap: 15px;
+    padding:32px;
 
-            flex-wrap: wrap;
-        }
+    transition:.3s;
+}
 
-        .btn {
-            display: inline-flex;
+.service-card:hover{
+    transform:translateY(-6px);
 
-            align-items: center;
-            justify-content: center;
+    border-color:#c9dcf7;
 
-            padding: 14px 25px;
+    box-shadow:0 18px 40px rgba(15,23,42,.08);
+}
 
-            border-radius: 9px;
+.service-number{
+    font-size:13px;
+    font-weight:800;
 
-            font-weight: 700;
+    color:#1769e0;
 
-            transition: 0.3s;
-        }
+    margin-bottom:24px;
+}
 
-        .btn-primary {
-            background: #2563eb;
+.service-card h3{
+    font-size:20px;
+    color:#101828;
 
-            color: white;
+    margin-bottom:10px;
+}
 
-            box-shadow:
-                0 10px 25px rgba(37,99,235,0.3);
-        }
+.service-card p{
+    color:#667085;
+    font-size:14px;
+}
 
-        .btn-primary:hover {
-            background: #3b82f6;
 
-            transform: translateY(-3px);
-        }
+/* =========================
+   ABOUT
+========================= */
 
-        .btn-outline {
-            border: 1px solid rgba(255,255,255,0.3);
+.about{
+    background:white;
+}
 
-            color: white;
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
 
-            background: rgba(255,255,255,0.04);
-        }
+    align-items:center;
+}
 
-        .btn-outline:hover {
-            border-color: #4da3ff;
+.about h2{
+    font-size:42px;
+    line-height:1.2;
 
-            background: rgba(77,163,255,0.1);
-        }
+    color:#101828;
 
+    margin-bottom:20px;
+}
 
-        /* =====================================================
-           HERO LOGO DISPLAY
-        ===================================================== */
+.about h2 span{
+    color:#1769e0;
+}
 
-        .hero-logo-area {
-            position: relative;
+.about p{
+    color:#667085;
+    font-size:16px;
 
-            display: flex;
+    margin-bottom:18px;
+}
 
-            justify-content: center;
+.about-list{
+    margin-top:25px;
+    list-style:none;
+}
 
-            align-items: center;
+.about-list li{
+    margin-bottom:13px;
 
-            min-height: 450px;
-        }
+    font-weight:600;
+    color:#344054;
+}
 
+.about-list li::before{
+    content:"✓";
 
-        .hero-logo-glow {
-            position: absolute;
+    color:#1769e0;
+    font-weight:900;
 
-            width: 330px;
-            height: 330px;
+    margin-right:10px;
+}
 
-            border-radius: 50%;
 
-            background:
-                radial-gradient(
-                    circle,
-                    rgba(37,99,235,0.35),
-                    transparent 70%
-                );
+/* ABOUT BOX */
 
-            filter: blur(10px);
-        }
+.about-box{
+    background:#0b1f3a;
+    color:white;
 
+    border-radius:20px;
 
-        .hero-logo-card {
-            position: relative;
+    padding:45px;
+}
 
-            width: 310px;
-            height: 310px;
+.about-box h3{
+    font-size:27px;
+    margin-bottom:25px;
+}
 
-            background: rgba(255,255,255,0.97);
+.about-point{
+    padding:18px 0;
 
-            border-radius: 35px;
+    border-bottom:1px solid rgba(255,255,255,.12);
+}
 
-            padding: 28px;
+.about-point:last-child{
+    border-bottom:none;
+}
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+.about-point strong{
+    display:block;
+    margin-bottom:4px;
+}
 
-            box-shadow:
-                0 30px 80px rgba(0,0,0,0.35),
-                0 0 0 1px rgba(255,255,255,0.15);
+.about-point span{
+    color:#aebdd0;
+    font-size:14px;
+}
 
-            transform: rotate(2deg);
 
-            transition: 0.4s;
-        }
+/* =========================
+   PROJECTS
+========================= */
 
-        .hero-logo-card:hover {
-            transform: rotate(0deg) scale(1.04);
-        }
+.projects{
+    background:#f8fafc;
+}
 
-        .hero-logo-card img {
-            width: 100%;
-            height: 100%;
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:24px;
+}
 
-            object-fit: contain;
+.project{
+    background:white;
 
-            border-radius: 20px;
-        }
+    border:1px solid #e5e7eb;
 
+    border-radius:15px;
 
-        /* =====================================================
-           STATS
-        ===================================================== */
+    padding:35px;
 
-        .hero-stats {
-            margin-top: 45px;
+    min-height:220px;
 
-            display: flex;
+    transition:.3s;
+}
 
-            gap: 35px;
+.project:hover{
+    transform:translateY(-5px);
 
-            flex-wrap: wrap;
-        }
+    box-shadow:0 18px 40px rgba(15,23,42,.08);
+}
 
-        .stat strong {
-            display: block;
+.project-label{
+    color:#1769e0;
 
-            font-size: 27px;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:1.5px;
 
-            color: white;
-        }
+    margin-bottom:18px;
+}
 
-        .stat span {
-            color: #8fa5bf;
+.project h3{
+    font-size:23px;
+    color:#101828;
 
-            font-size: 13px;
-        }
+    margin-bottom:10px;
+}
 
+.project p{
+    color:#667085;
+    font-size:14px;
+}
 
-        /* =====================================================
-           SECTION
-        ===================================================== */
 
-        .section {
-            padding: 100px 25px;
-        }
+/* =========================
+   PROCESS
+========================= */
 
-        .container {
-            max-width: 1200px;
+.process{
+    background:white;
+}
 
-            margin: auto;
-        }
+.process-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
 
-        .section-heading {
-            text-align: center;
+.process-item{
+    text-align:center;
+    padding:25px;
+}
 
-            max-width: 700px;
+.process-number{
+    width:45px;
+    height:45px;
 
-            margin: 0 auto 55px;
-        }
+    margin:0 auto 18px;
 
-        .section-heading .tag {
-            color: #2563eb;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-            font-size: 13px;
+    border-radius:50%;
 
-            font-weight: 800;
+    background:#edf5ff;
+    color:#1769e0;
 
-            letter-spacing: 2px;
+    font-weight:800;
+}
 
-            text-transform: uppercase;
+.process-item h3{
+    font-size:18px;
+    margin-bottom:7px;
+}
 
-            margin-bottom: 10px;
-        }
+.process-item p{
+    color:#667085;
+    font-size:13px;
+}
 
-        .section-heading h2 {
-            font-size: 42px;
 
-            color: #111827;
+/* =========================
+   TECHNOLOGIES
+========================= */
 
-            margin-bottom: 12px;
-        }
+.technology{
+    background:#f8fafc;
+}
 
-        .section-heading p {
-            color: #697586;
+.tech-list{
+    display:flex;
+    flex-wrap:wrap;
 
-            font-size: 17px;
-        }
+    justify-content:center;
 
+    gap:12px;
+}
 
-        /* =====================================================
-           SERVICES
-        ===================================================== */
+.tech{
+    padding:11px 20px;
 
-        .services {
-            background: #ffffff;
-        }
+    background:white;
 
-        .service-grid {
-            display: grid;
+    border:1px solid #e2e8f0;
 
-            grid-template-columns: repeat(3, 1fr);
+    border-radius:7px;
 
-            gap: 24px;
-        }
+    color:#344054;
 
-        .service-card {
-            position: relative;
+    font-size:14px;
+    font-weight:700;
+}
 
-            padding: 35px 28px;
 
-            border-radius: 18px;
+/* =========================
+   CTA
+========================= */
 
-            background: #ffffff;
+.cta{
+    padding:85px 25px;
 
-            border: 1px solid #e5eaf1;
+    background:#1769e0;
 
-            box-shadow:
-                0 8px 30px rgba(15,23,42,0.04);
+    color:white;
+}
 
-            transition: 0.35s;
+.cta-content{
+    max-width:800px;
+    margin:auto;
 
-            overflow: hidden;
-        }
+    text-align:center;
+}
 
-        .service-card::before {
-            content: "";
+.cta h2{
+    font-size:43px;
+    line-height:1.2;
 
-            position: absolute;
+    margin-bottom:15px;
+}
 
-            top: 0;
-            left: 0;
+.cta p{
+    color:#dceaff;
+    margin-bottom:28px;
+}
 
-            width: 100%;
-            height: 3px;
+.cta .btn-primary{
+    background:white;
+    color:#1769e0;
 
-            background: #2563eb;
+    box-shadow:none;
+}
 
-            transform: scaleX(0);
 
-            transform-origin: left;
+/* =========================
+   CONTACT
+========================= */
 
-            transition: 0.35s;
-        }
+.contact{
+    background:white;
+}
 
-        .service-card:hover {
-            transform: translateY(-8px);
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
 
-            box-shadow:
-                0 20px 45px rgba(15,23,42,0.10);
-        }
+.contact-card{
+    border:1px solid #e5e7eb;
 
-        .service-card:hover::before {
-            transform: scaleX(1);
-        }
+    border-radius:15px;
 
-        .service-icon {
-            width: 58px;
-            height: 58px;
+    padding:35px;
+}
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+.contact-card h3{
+    font-size:25px;
+    color:#101828;
 
-            border-radius: 14px;
+    margin-bottom:12px;
+}
 
-            background: #eff6ff;
+.contact-card p{
+    color:#667085;
+    margin-bottom:25px;
+}
 
-            font-size: 27px;
+.contact-detail{
+    padding:14px 0;
 
-            margin-bottom: 22px;
-        }
+    border-bottom:1px solid #edf0f5;
+}
 
-        .service-card h3 {
-            font-size: 21px;
+.contact-detail strong{
+    display:block;
+    color:#344054;
+}
 
-            margin-bottom: 10px;
+.contact-detail span{
+    color:#667085;
+    font-size:14px;
+}
 
-            color: #111827;
-        }
 
-        .service-card p {
-            color: #697586;
+/* =========================
+   FOOTER
+========================= */
 
-            font-size: 15px;
-        }
+footer{
+    background:#081426;
 
+    color:white;
 
-        /* =====================================================
-           ABOUT
-        ===================================================== */
+    padding:35px 25px;
 
-        .about {
-            background: #f3f7fc;
-        }
+    text-align:center;
+}
 
-        .about-grid {
-            display: grid;
+footer strong{
+    font-size:18px;
+}
 
-            grid-template-columns: 1fr 1fr;
+footer p{
+    margin-top:7px;
 
-            gap: 70px;
+    color:#8998ac;
 
-            align-items: center;
-        }
+    font-size:13px;
+}
 
-        .about-content h2 {
-            font-size: 42px;
 
-            line-height: 1.2;
+/* =========================
+   WHATSAPP
+========================= */
 
-            margin-bottom: 20px;
-        }
+.whatsapp{
+    position:fixed;
 
-        .about-content h2 span {
-            color: #2563eb;
-        }
+    right:22px;
+    bottom:22px;
 
-        .about-content p {
-            color: #64748b;
+    width:55px;
+    height:55px;
 
-            margin-bottom: 18px;
+    border-radius:50%;
 
-            font-size: 17px;
-        }
+    background:#25d366;
 
-        .check-list {
-            list-style: none;
+    color:white;
 
-            margin-top: 25px;
-        }
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-        .check-list li {
-            margin-bottom: 14px;
+    font-size:25px;
 
-            font-weight: 600;
-        }
+    box-shadow:0 8px 25px rgba(0,0,0,.2);
 
-        .check-list li::before {
-            content: "✓";
+    z-index:999;
+}
 
-            width: 25px;
-            height: 25px;
 
-            display: inline-flex;
+/* =========================
+   RESPONSIVE
+========================= */
 
-            align-items: center;
-            justify-content: center;
+@media(max-width:950px){
 
-            margin-right: 10px;
+    .hero-container{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
 
-            border-radius: 50%;
+    .hero-content{
+        margin:auto;
+    }
 
-            background: #dbeafe;
+    .hero-description{
+        margin-left:auto;
+        margin-right:auto;
+    }
 
-            color: #2563eb;
+    .hero-buttons{
+        justify-content:center;
+    }
 
-            font-weight: bold;
-        }
+    .hero-visual{
+        margin-top:20px;
+    }
 
+    .service-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
 
-        /* ABOUT CARD */
+    .about-grid{
+        grid-template-columns:1fr;
+    }
 
-        .about-card {
-            background:
-                linear-gradient(
-                    145deg,
-                    #07162e,
-                    #102b54
-                );
+    .project-grid{
+        grid-template-columns:1fr;
+    }
 
-            border-radius: 28px;
+    .process-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
 
-            padding: 45px;
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+}
 
-            color: white;
 
-            box-shadow:
-                0 25px 60px rgba(7,22,46,0.18);
-        }
+@media(max-width:650px){
 
-        .about-card h3 {
-            font-size: 28px;
+    .nav-container{
+        height:auto;
+        padding:10px 15px;
 
-            margin-bottom: 25px;
-        }
+        flex-direction:column;
+        gap:10px;
+    }
 
-        .about-card-item {
-            display: flex;
+    .nav-links{
+        gap:15px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
 
-            align-items: center;
+    .nav-links a{
+        font-size:12px;
+    }
 
-            gap: 15px;
+    .hero{
+        padding-top:165px;
+    }
 
-            padding: 16px 0;
+    .hero h1{
+        font-size:43px;
+        letter-spacing:-1px;
+    }
 
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
+    .hero-subtitle{
+        font-size:21px;
+    }
 
-        .about-card-item:last-child {
-            border-bottom: none;
-        }
+    .logo-display{
+        width:270px;
+        height:270px;
+        padding:25px;
+    }
 
-        .about-card-icon {
-            font-size: 24px;
-        }
+    .trust-container{
+        flex-direction:column;
+        gap:25px;
+    }
 
-        .about-card-item strong {
-            display: block;
-        }
+    .service-grid{
+        grid-template-columns:1fr;
+    }
 
-        .about-card-item span {
-            color: #9eb1c9;
+    .process-grid{
+        grid-template-columns:1fr;
+    }
 
-            font-size: 13px;
-        }
+    .section-head h2,
+    .about h2{
+        font-size:32px;
+    }
 
+    .cta h2{
+        font-size:32px;
+    }
 
-        /* =====================================================
-           PROJECTS
-        ===================================================== */
+}
 
-        .projects {
-            background: white;
-        }
-
-        .project-grid {
-            display: grid;
-
-            grid-template-columns: repeat(3, 1fr);
-
-            gap: 25px;
-        }
-
-        .project-card {
-            padding: 30px;
-
-            min-height: 230px;
-
-            border-radius: 18px;
-
-            background: #f8fafc;
-
-            border: 1px solid #e5e7eb;
-
-            transition: 0.3s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-7px);
-
-            background: #ffffff;
-
-            box-shadow:
-                0 20px 40px rgba(15,23,42,0.08);
-        }
-
-        .project-number {
-            color: #2563eb;
-
-            font-size: 14px;
-
-            font-weight: 800;
-
-            letter-spacing: 2px;
-
-            margin-bottom: 20px;
-        }
-
-        .project-card h3 {
-            font-size: 22px;
-
-            margin-bottom: 12px;
-        }
-
-        .project-card p {
-            color: #697586;
-
-            font-size: 15px;
-        }
-
-
-        /* =====================================================
-           TECHNOLOGIES
-        ===================================================== */
-
-        .technology {
-            background: #f3f7fc;
-        }
-
-        .tech-grid {
-            display: flex;
-
-            flex-wrap: wrap;
-
-            justify-content: center;
-
-            gap: 14px;
-        }
-
-        .tech {
-            padding: 13px 22px;
-
-            background: white;
-
-            border: 1px solid #e1e7ef;
-
-            border-radius: 10px;
-
-            font-weight: 700;
-
-            color: #344054;
-
-            transition: 0.3s;
-        }
-
-        .tech:hover {
-            background: #2563eb;
-
-            color: white;
-
-            border-color: #2563eb;
-
-            transform: translateY(-3px);
-        }
-
-
-        /* =====================================================
-           CTA
-        ===================================================== */
-
-        .cta {
-            padding: 90px 25px;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #0a1b38,
-                    #12396d
-                );
-
-            color: white;
-        }
-
-        .cta-content {
-            max-width: 850px;
-
-            margin: auto;
-
-            text-align: center;
-        }
-
-        .cta h2 {
-            font-size: 43px;
-
-            margin-bottom: 15px;
-        }
-
-        .cta p {
-            color: #b6c7dc;
-
-            font-size: 17px;
-
-            margin-bottom: 30px;
-        }
-
-
-        /* =====================================================
-           CONTACT
-        ===================================================== */
-
-        .contact {
-            background: white;
-        }
-
-        .contact-grid {
-            display: grid;
-
-            grid-template-columns: 0.8fr 1.2fr;
-
-            gap: 30px;
-        }
-
-        .contact-info {
-            padding: 35px;
-
-            border-radius: 20px;
-
-            background: #07162e;
-
-            color: white;
-        }
-
-        .contact-info h3 {
-            font-size: 28px;
-
-            margin-bottom: 15px;
-        }
-
-        .contact-info p {
-            color: #aebed3;
-
-            margin-bottom: 30px;
-        }
-
-        .contact-item {
-            padding: 15px 0;
-
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .contact-item strong {
-            display: block;
-
-            color: white;
-        }
-
-        .contact-item span {
-            color: #9eb1c9;
-
-            font-size: 14px;
-        }
-
-
-        .contact-action {
-            padding: 45px;
-
-            border: 1px solid #e5e7eb;
-
-            border-radius: 20px;
-
-            background: #f8fafc;
-        }
-
-        .contact-action h3 {
-            font-size: 30px;
-
-            margin-bottom: 12px;
-        }
-
-        .contact-action p {
-            color: #697586;
-
-            margin-bottom: 25px;
-        }
-
-
-        /* =====================================================
-           FOOTER
-        ===================================================== */
-
-        footer {
-            background: #040c1a;
-
-            color: white;
-
-            padding: 35px 25px;
-
-            text-align: center;
-        }
-
-        footer h3 {
-            margin-bottom: 8px;
-        }
-
-        footer p {
-            color: #8293a9;
-
-            font-size: 14px;
-        }
-
-
-        /* =====================================================
-           WHATSAPP
-        ===================================================== */
-
-        .whatsapp {
-            position: fixed;
-
-            right: 25px;
-
-            bottom: 25px;
-
-            width: 58px;
-            height: 58px;
-
-            display: flex;
-
-            align-items: center;
-            justify-content: center;
-
-            border-radius: 50%;
-
-            background: #25D366;
-
-            color: white;
-
-            font-size: 27px;
-
-            box-shadow:
-                0 8px 25px rgba(0,0,0,0.2);
-
-            z-index: 999;
-
-            transition: 0.3s;
-        }
-
-        .whatsapp:hover {
-            transform: scale(1.1);
-        }
-
-
-        /* =====================================================
-           TABLET
-        ===================================================== */
-
-        @media (max-width: 950px) {
-
-            .hero-container {
-                grid-template-columns: 1fr;
-
-                text-align: center;
-            }
-
-            .hero-description {
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            .hero-buttons {
-                justify-content: center;
-            }
-
-            .hero-stats {
-                justify-content: center;
-            }
-
-            .hero-logo-area {
-                min-height: 350px;
-            }
-
-            .service-grid,
-            .project-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .about-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-
-        }
-
-
-        /* =====================================================
-           MOBILE
-        ===================================================== */
-
-        @media (max-width: 650px) {
-
-            .nav-container {
-                height: auto;
-
-                padding: 10px 15px;
-
-                flex-direction: column;
-
-                gap: 10px;
-            }
-
-            .brand-name {
-                font-size: 20px;
-            }
-
-            .brand-logo {
-                width: 48px;
-                height: 48px;
-            }
-
-            .nav-links {
-                gap: 14px;
-
-                flex-wrap: wrap;
-
-                justify-content: center;
-            }
-
-            .nav-links a {
-                font-size: 12px;
-            }
-
-            .nav-contact {
-                padding: 7px 12px;
-            }
-
-            .hero {
-                padding-top: 180px;
-            }
-
-            .hero h1 {
-                font-size: 45px;
-
-                letter-spacing: -1px;
-            }
-
-            .hero-subtitle {
-                font-size: 23px;
-            }
-
-            .hero-description {
-                font-size: 16px;
-            }
-
-            .hero-logo-card {
-                width: 250px;
-                height: 250px;
-            }
-
-            .hero-logo-area {
-                min-height: 300px;
-            }
-
-            .service-grid,
-            .project-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .section-heading h2,
-            .about-content h2 {
-                font-size: 32px;
-            }
-
-            .cta h2 {
-                font-size: 32px;
-            }
-
-            .contact-action,
-            .contact-info {
-                padding: 28px;
-            }
-
-        }
-
-    </style>
-
+</style>
 </head>
 
 
 <body>
 
 
-<!-- =====================================================
-     NAVBAR
-===================================================== -->
+<!-- NAVBAR -->
 
 <header class="navbar">
 
-    <div class="nav-container">
+<div class="nav-container">
+
+<a href="#home" class="logo">
+
+<div class="logo-box">
+<img src="logo.png" alt="Vamsify Web Logo">
+</div>
+
+<div class="logo-text">
+Vamsify <span>Web</span>
+</div>
+
+</a>
 
 
-        <a href="#home" class="brand">
+<ul class="nav-links">
 
-            <div class="brand-logo">
+<li><a href="#home">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact" class="nav-button">Contact</a></li>
 
-                <img src="logo.png"
-                     alt="Vamsify Web Logo">
+</ul>
 
-            </div>
-
-            <div class="brand-name">
-                Vamsify <span>Web</span>
-            </div>
-
-        </a>
-
-
-        <ul class="nav-links">
-
-            <li>
-                <a href="#home">Home</a>
-            </li>
-
-            <li>
-                <a href="#about">About</a>
-            </li>
-
-            <li>
-                <a href="#services">Services</a>
-            </li>
-
-            <li>
-                <a href="#projects">Projects</a>
-            </li>
-
-            <li>
-                <a href="#contact" class="nav-contact">
-                    Let's Talk
-                </a>
-            </li>
-
-        </ul>
-
-    </div>
+</div>
 
 </header>
 
 
 
-<!-- =====================================================
-     HERO
-===================================================== -->
+<!-- HERO -->
 
 <section class="hero" id="home">
 
-    <div class="hero-container">
+<div class="hero-container">
 
 
-        <div class="hero-content">
+<div class="hero-content">
+
+<div class="hero-tag">
+WEB & DIGITAL SOLUTIONS
+</div>
+
+<h1>
+Digital Solutions<br>
+<span>Built for Business.</span>
+</h1>
+
+<div class="hero-subtitle">
+Vamsify Web & Digital Solutions
+</div>
+
+<p class="hero-description">
+
+We create professional websites, e-commerce platforms,
+web applications and custom digital solutions designed
+to help businesses establish and grow their online presence.
+
+</p>
 
 
-            <div class="hero-label">
-                WEB & DIGITAL SOLUTIONS
-            </div>
+<div class="hero-buttons">
+
+<a href="#contact" class="btn btn-primary">
+Start a Project
+</a>
+
+<a href="#projects" class="btn btn-secondary">
+View Our Work
+</a>
+
+</div>
+
+</div>
 
 
-            <h1>
-                Build Digital.<br>
-                <span>Grow Business.</span>
-            </h1>
+<div class="hero-visual">
+
+<div class="logo-display">
+
+<img src="logo.png" alt="Vamsify Web">
+
+</div>
+
+</div>
 
 
-            <div class="hero-subtitle">
-                Vamsify Web & Digital Solutions
-            </div>
-
-
-            <p class="hero-description">
-
-                We design and develop modern websites,
-                e-commerce platforms, web applications and
-                custom digital solutions that help businesses
-                build a strong online presence.
-
-            </p>
-
-
-            <div class="hero-buttons">
-
-                <a href="#projects"
-                   class="btn btn-primary">
-
-                    Explore Projects →
-
-                </a>
-
-
-                <a href="#contact"
-                   class="btn btn-outline">
-
-                    Start a Project
-
-                </a>
-
-            </div>
-
-
-            <div class="hero-stats">
-
-                <div class="stat">
-
-                    <strong>Web</strong>
-
-                    <span>Development</span>
-
-                </div>
-
-
-                <div class="stat">
-
-                    <strong>Digital</strong>
-
-                    <span>Solutions</span>
-
-                </div>
-
-
-                <div class="stat">
-
-                    <strong>Custom</strong>
-
-                    <span>Applications</span>
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-
-
-        <!-- LOGO -->
-
-        <div class="hero-logo-area">
-
-            <div class="hero-logo-glow"></div>
-
-
-            <div class="hero-logo-card">
-
-                <img src="logo.png"
-                     alt="Vamsify Web Logo">
-
-            </div>
-
-        </div>
-
-
-    </div>
+</div>
 
 </section>
 
 
 
-<!-- =====================================================
-     SERVICES
-===================================================== -->
+<!-- TRUST -->
+
+<section class="trust">
+
+<div class="trust-container">
+
+<div class="trust-item">
+<strong>Websites</strong>
+<span>Professional & Responsive</span>
+</div>
+
+<div class="trust-item">
+<strong>E-Commerce</strong>
+<span>Online Business Solutions</span>
+</div>
+
+<div class="trust-item">
+<strong>Web Apps</strong>
+<span>Custom Applications</span>
+</div>
+
+<div class="trust-item">
+<strong>Business Software</strong>
+<span>Digital Business Tools</span>
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- SERVICES -->
 
 <section class="section services" id="services">
 
-    <div class="container">
+<div class="container">
+
+<div class="section-head">
+
+<div class="section-label">
+Our Services
+</div>
+
+<h2>
+Technology That Works For Your Business
+</h2>
+
+<p>
+From a simple business website to a complete
+digital application, we build solutions around your requirements.
+</p>
+
+</div>
 
 
-        <div class="section-heading">
-
-            <div class="tag">
-                What We Do
-            </div>
-
-            <h2>
-                Digital Solutions For Your Business
-            </h2>
-
-            <p>
-                From websites to custom software,
-                we build solutions around your business needs.
-            </p>
-
-        </div>
+<div class="service-grid">
 
 
+<div class="service-card">
 
-        <div class="service-grid">
+<div class="service-number">01</div>
 
+<h3>Website Development</h3>
 
-            <div class="service-card">
+<p>
+Professional websites for companies,
+small businesses, professionals and organizations.
+</p>
 
-                <div class="service-icon">
-                    🌐
-                </div>
-
-                <h3>
-                    Website Development
-                </h3>
-
-                <p>
-                    Professional and responsive websites
-                    for businesses, organizations,
-                    portfolios and personal brands.
-                </p>
-
-            </div>
+</div>
 
 
-            <div class="service-card">
+<div class="service-card">
 
-                <div class="service-icon">
-                    🛒
-                </div>
+<div class="service-number">02</div>
 
-                <h3>
-                    E-Commerce Development
-                </h3>
+<h3>E-Commerce Development</h3>
 
-                <p>
-                    Online stores with products, customer
-                    orders, delivery details and business
-                    management features.
-                </p>
+<p>
+Online stores with products, customers,
+orders, delivery information and business management.
+</p>
 
-            </div>
+</div>
 
 
-            <div class="service-card">
+<div class="service-card">
 
-                <div class="service-icon">
-                    💻
-                </div>
+<div class="service-number">03</div>
 
-                <h3>
-                    Web Applications
-                </h3>
+<h3>Web Applications</h3>
 
-                <p>
-                    Custom web applications designed
-                    to solve real business problems.
-                </p>
+<p>
+Custom web applications designed around
+your business workflow and requirements.
+</p>
 
-            </div>
+</div>
 
 
-            <div class="service-card">
+<div class="service-card">
 
-                <div class="service-icon">
-                    📊
-                </div>
+<div class="service-number">04</div>
 
-                <h3>
-                    Business Software
-                </h3>
+<h3>Business Management Systems</h3>
 
-                <p>
-                    Inventory, billing, customer,
-                    employee and business management
-                    systems.
-                </p>
+<p>
+Inventory, customer, employee, billing and
+other business management applications.
+</p>
 
-            </div>
+</div>
 
 
-            <div class="service-card">
+<div class="service-card">
 
-                <div class="service-icon">
-                    🎨
-                </div>
+<div class="service-number">05</div>
 
-                <h3>
-                    UI / UX Design
-                </h3>
+<h3>UI / UX Design</h3>
 
-                <p>
-                    Clean, modern and user-friendly
-                    interfaces for websites and applications.
-                </p>
+<p>
+Clean and user-friendly interfaces that provide
+a professional experience across devices.
+</p>
 
-            </div>
+</div>
 
 
-            <div class="service-card">
+<div class="service-card">
 
-                <div class="service-icon">
-                    🤖
-                </div>
+<div class="service-number">06</div>
 
-                <h3>
-                    AI & Digital Solutions
-                </h3>
+<h3>Digital Solutions</h3>
 
-                <p>
-                    Technology solutions incorporating
-                    automation, data and modern AI capabilities.
-                </p>
+<p>
+Technology solutions that help businesses
+organize, automate and improve their operations.
+</p>
 
-            </div>
+</div>
 
 
-        </div>
+</div>
 
-    </div>
+</div>
 
 </section>
 
 
 
-<!-- =====================================================
-     ABOUT
-===================================================== -->
+<!-- ABOUT -->
 
 <section class="section about" id="about">
 
-    <div class="container">
+<div class="container">
 
+<div class="about-grid">
 
-        <div class="about-grid">
 
+<div>
 
-            <div class="about-content">
+<div class="section-label">
+About Vamsify
+</div>
 
+<h2>
+We Turn Business Ideas Into
+<span>Digital Products.</span>
+</h2>
 
-                <div class="section-heading"
-                     style="text-align:left; margin:0 0 25px 0;">
+<p>
+Vamsify Web & Digital Solutions focuses on
+building practical and professional digital
+solutions for businesses and individuals.
+</p>
 
-                    <div class="tag">
-                        About Us
-                    </div>
+<p>
+Our goal is simple — understand what a business
+needs and create technology that makes that
+business easier to present, manage and grow online.
+</p>
 
-                    <h2>
-                        Turning Ideas Into
-                        <span>Digital Experiences</span>
-                    </h2>
 
-                </div>
+<ul class="about-list">
 
+<li>Professional and responsive design</li>
+<li>Mobile and laptop friendly websites</li>
+<li>Custom development based on requirements</li>
+<li>Business-focused digital solutions</li>
+<li>Modern and scalable technology</li>
 
-                <p>
+</ul>
 
-                    Vamsify Web & Digital Solutions focuses
-                    on creating modern digital products
-                    for businesses and individuals.
+</div>
 
-                </p>
 
+<div class="about-box">
 
-                <p>
+<h3>
+Why Choose Vamsify Web?
+</h3>
 
-                    We combine design, development and
-                    technology to create websites and
-                    software that are simple, responsive
-                    and easy to use.
 
-                </p>
+<div class="about-point">
 
+<strong>Business First</strong>
 
-                <ul class="check-list">
+<span>
+We focus on the actual requirements of your business.
+</span>
 
-                    <li>
-                        Responsive & Mobile Friendly
-                    </li>
+</div>
 
-                    <li>
-                        Modern Professional Design
-                    </li>
 
-                    <li>
-                        Custom Development
-                    </li>
+<div class="about-point">
 
-                    <li>
-                        Business-Focused Solutions
-                    </li>
+<strong>Modern Design</strong>
 
-                    <li>
-                        Scalable Technology
-                    </li>
+<span>
+Clean interfaces designed for today's customers.
+</span>
 
-                </ul>
+</div>
 
 
-            </div>
+<div class="about-point">
 
+<strong>Responsive Development</strong>
 
+<span>
+Websites designed for mobile, tablet and desktop.
+</span>
 
-            <div class="about-card">
+</div>
 
 
-                <h3>
-                    Why Vamsify Web?
-                </h3>
+<div class="about-point">
 
+<strong>Custom Solutions</strong>
 
-                <div class="about-card-item">
+<span>
+We can build features specifically for your workflow.
+</span>
 
-                    <div class="about-card-icon">
-                        🚀
-                    </div>
+</div>
 
-                    <div>
+</div>
 
-                        <strong>
-                            Modern Development
-                        </strong>
 
-                        <span>
-                            Clean and responsive digital products
-                        </span>
+</div>
 
-                    </div>
-
-                </div>
-
-
-                <div class="about-card-item">
-
-                    <div class="about-card-icon">
-                        💡
-                    </div>
-
-                    <div>
-
-                        <strong>
-                            Business Ideas
-                        </strong>
-
-                        <span>
-                            Technology designed around your goals
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-                <div class="about-card-item">
-
-                    <div class="about-card-icon">
-                        📱
-                    </div>
-
-                    <div>
-
-                        <strong>
-                            Mobile Ready
-                        </strong>
-
-                        <span>
-                            Designed for phones, tablets and laptops
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-                <div class="about-card-item">
-
-                    <div class="about-card-icon">
-                        ⚙️
-                    </div>
-
-                    <div>
-
-                        <strong>
-                            Custom Solutions
-                        </strong>
-
-                        <span>
-                            Built according to your requirements
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-            </div>
-
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
 
-<!-- =====================================================
-     PROJECTS
-===================================================== -->
+<!-- PROJECTS -->
 
 <section class="section projects" id="projects">
 
-    <div class="container">
+<div class="container">
 
+<div class="section-head">
 
-        <div class="section-heading">
+<div class="section-label">
+Our Work
+</div>
 
-            <div class="tag">
-                Our Work
-            </div>
+<h2>
+Digital Projects
+</h2>
 
-            <h2>
-                Projects We Can Build
-            </h2>
+<p>
+Examples of the types of websites and software
+solutions that Vamsify Web can develop.
+</p>
 
-            <p>
-                Digital products designed for different
-                business and professional requirements.
-            </p>
+</div>
 
-        </div>
 
+<div class="project-grid">
 
 
-        <div class="project-grid">
+<div class="project">
 
+<div class="project-label">BUSINESS WEBSITE</div>
 
-            <div class="project-card">
+<h3>Company Website</h3>
 
-                <div class="project-number">
-                    PROJECT 01
-                </div>
+<p>
+A professional online presence for businesses
+to showcase their services, products,
+projects and contact information.
+</p>
 
-                <h3>
-                    E-Commerce Platform
-                </h3>
+</div>
 
-                <p>
-                    Complete online shopping experience
-                    with products, orders, customers
-                    and delivery information.
-                </p>
 
-            </div>
+<div class="project">
 
+<div class="project-label">E-COMMERCE</div>
 
-            <div class="project-card">
+<h3>Online Shopping Platform</h3>
 
-                <div class="project-number">
-                    PROJECT 02
-                </div>
+<p>
+An online store where customers can browse
+products, place orders and provide delivery details.
+</p>
 
-                <h3>
-                    Business Website
-                </h3>
+</div>
 
-                <p>
-                    Professional website for companies
-                    to showcase services, products,
-                    projects and contact information.
-                </p>
 
-            </div>
+<div class="project">
 
+<div class="project-label">MANAGEMENT SYSTEM</div>
 
-            <div class="project-card">
+<h3>Inventory Management</h3>
 
-                <div class="project-number">
-                    PROJECT 03
-                </div>
+<p>
+A business system for managing products,
+stock, sales and inventory information.
+</p>
 
-                <h3>
-                    Portfolio Website
-                </h3>
+</div>
 
-                <p>
-                    Modern personal portfolio for
-                    developers, designers and professionals.
-                </p>
 
-            </div>
+<div class="project">
 
+<div class="project-label">CUSTOM APPLICATION</div>
 
-            <div class="project-card">
+<h3>Business Web Application</h3>
 
-                <div class="project-number">
-                    PROJECT 04
-                </div>
+<p>
+Custom software designed around the specific
+workflow and requirements of a business.
+</p>
 
-                <h3>
-                    Inventory Management
-                </h3>
+</div>
 
-                <p>
-                    Manage products, stock, sales and
-                    inventory information in one system.
-                </p>
 
-            </div>
+</div>
 
-
-            <div class="project-card">
-
-                <div class="project-number">
-                    PROJECT 05
-                </div>
-
-                <h3>
-                    Student Management
-                </h3>
-
-                <p>
-                    Manage student details, marks,
-                    results and academic information.
-                </p>
-
-            </div>
-
-
-            <div class="project-card">
-
-                <div class="project-number">
-                    PROJECT 06
-                </div>
-
-                <h3>
-                    Customer Management
-                </h3>
-
-                <p>
-                    Organize customer information,
-                    enquiries and business communication.
-                </p>
-
-            </div>
-
-
-            <div class="project-card">
-
-                <div class="project-number">
-                    PROJECT 07
-                </div>
-
-                <h3>
-                    Booking System
-                </h3>
-
-                <p>
-                    Online appointment and booking
-                    solutions for different businesses.
-                </p>
-
-            </div>
-
-
-            <div class="project-card">
-
-                <div class="project-number">
-                    PROJECT 08
-                </div>
-
-                <h3>
-                    Restaurant Website
-                </h3>
-
-                <p>
-                    Restaurant website with menu,
-                    business information and customer
-                    enquiry features.
-                </p>
-
-            </div>
-
-
-            <div class="project-card">
-
-                <div class="project-number">
-                    PROJECT 09
-                </div>
-
-                <h3>
-                    Custom Software
-                </h3>
-
-                <p>
-                    Software developed specifically
-                    around your business workflow.
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
 
-<!-- =====================================================
-     TECHNOLOGIES
-===================================================== -->
+<!-- PROCESS -->
+
+<section class="section process">
+
+<div class="container">
+
+<div class="section-head">
+
+<div class="section-label">
+Our Process
+</div>
+
+<h2>
+From Idea To Launch
+</h2>
+
+<p>
+A simple process to turn your requirement
+into a working digital product.
+</p>
+
+</div>
+
+
+<div class="process-grid">
+
+
+<div class="process-item">
+
+<div class="process-number">01</div>
+
+<h3>Discuss</h3>
+
+<p>
+Understand your business and requirements.
+</p>
+
+</div>
+
+
+<div class="process-item">
+
+<div class="process-number">02</div>
+
+<h3>Design</h3>
+
+<p>
+Plan the structure and user experience.
+</p>
+
+</div>
+
+
+<div class="process-item">
+
+<div class="process-number">03</div>
+
+<h3>Develop</h3>
+
+<p>
+Build and test the website or application.
+</p>
+
+</div>
+
+
+<div class="process-item">
+
+<div class="process-number">04</div>
+
+<h3>Launch</h3>
+
+<p>
+Deploy the final product and make it available online.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- TECHNOLOGIES -->
 
 <section class="section technology">
 
-    <div class="container">
+<div class="container">
+
+<div class="section-head">
+
+<div class="section-label">
+Technology
+</div>
+
+<h2>
+Tools We Use
+</h2>
+
+<p>
+Modern technologies for building digital products.
+</p>
+
+</div>
 
 
-        <div class="section-heading">
+<div class="tech-list">
 
-            <div class="tag">
-                Technology
-            </div>
+<div class="tech">HTML</div>
+<div class="tech">CSS</div>
+<div class="tech">JavaScript</div>
+<div class="tech">Python</div>
+<div class="tech">Django</div>
+<div class="tech">React</div>
+<div class="tech">MySQL</div>
+<div class="tech">GitHub</div>
+<div class="tech">Figma</div>
 
-            <h2>
-                Technologies We Work With
-            </h2>
+</div>
 
-            <p>
-                Modern tools for building reliable
-                digital experiences.
-            </p>
-
-        </div>
-
-
-        <div class="tech-grid">
-
-            <div class="tech">HTML</div>
-
-            <div class="tech">CSS</div>
-
-            <div class="tech">JavaScript</div>
-
-            <div class="tech">Python</div>
-
-            <div class="tech">Django</div>
-
-            <div class="tech">React</div>
-
-            <div class="tech">MySQL</div>
-
-            <div class="tech">GitHub</div>
-
-            <div class="tech">Figma</div>
-
-            <div class="tech">AI / ML</div>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
 
-<!-- =====================================================
-     CTA
-===================================================== -->
+<!-- CTA -->
 
 <section class="cta">
 
-    <div class="cta-content">
+<div class="cta-content">
 
-        <h2>
-            Have a Digital Idea?
-        </h2>
+<h2>
+Have a Project in Mind?
+</h2>
 
-        <p>
-            Let's turn your idea into a professional
-            website or digital solution.
-        </p>
+<p>
+Tell us what you need and let's create
+the right digital solution for your business.
+</p>
 
-        <a href="#contact"
-           class="btn btn-primary">
+<a href="#contact" class="btn btn-primary">
+Let's Work Together
+</a>
 
-            Start Your Project →
-
-        </a>
-
-    </div>
+</div>
 
 </section>
 
 
 
-<!-- =====================================================
-     CONTACT
-===================================================== -->
+<!-- CONTACT -->
 
 <section class="section contact" id="contact">
 
-    <div class="container">
+<div class="container">
+
+<div class="section-head">
+
+<div class="section-label">
+Contact
+</div>
+
+<h2>
+Let's Talk About Your Project
+</h2>
+
+<p>
+Have an idea for a website, online store
+or business application? Get in touch.
+</p>
+
+</div>
 
 
-        <div class="section-heading">
-
-            <div class="tag">
-                Contact Us
-            </div>
-
-            <h2>
-                Let's Build Something Great
-            </h2>
-
-            <p>
-                Tell us about your project and let's
-                discuss how we can help.
-            </p>
-
-        </div>
+<div class="contact-grid">
 
 
+<div class="contact-card">
 
-        <div class="contact-grid">
+<h3>
+Vamsify Web
+</h3>
 
-
-            <div class="contact-info">
-
-
-                <h3>
-                    Vamsify Web
-                </h3>
-
-
-                <p>
-                    Web & Digital Solutions for modern
-                    businesses and professionals.
-                </p>
+<p>
+Web & Digital Solutions for businesses
+and professionals.
+</p>
 
 
-                <div class="contact-item">
+<div class="contact-detail">
 
-                    <strong>
-                        Email
-                    </strong>
+<strong>Email</strong>
 
-                    <span>
-                        vamsifyweb@gmail.com
-                    </span>
+<span>
+vamsifyweb@gmail.com
+</span>
 
-                </div>
+</div>
 
 
-                <div class="contact-item">
+<div class="contact-detail">
 
-                    <strong>
-                        Phone
-                    </strong>
+<strong>Phone</strong>
 
-                    <span>
-                        +91 6305765198
-                    </span>
+<span>
++91 6305765198
+</span>
 
-                </div>
+</div>
 
 
-                <div class="contact-item">
+<div class="contact-detail">
 
-                    <strong>
-                        Services
-                    </strong>
+<strong>Services</strong>
 
-                    <span>
-                        Websites • E-Commerce • Software
-                    </span>
+<span>
+Websites • E-Commerce • Web Applications • Software
+</span>
 
-                </div>
+</div>
 
-
-            </div>
+</div>
 
 
+<div class="contact-card">
 
-            <div class="contact-action">
+<h3>
+Start Your Project
+</h3>
 
+<p>
+Send us your requirement and we can discuss
+the right solution for your business.
+</p>
 
-                <h3>
-                    Start Your Project
-                </h3>
+<a href="mailto:vamsifyweb@gmail.com"
+class="btn btn-primary">
 
+Send an Email
 
-                <p>
-                    Need a website, online store,
-                    business application or custom
-                    software? Get in touch with us.
-                </p>
+</a>
 
-
-                <a href="mailto:vamsifyweb@gmail.com"
-                   class="btn btn-primary">
-
-                    📧 Email Vamsify Web
-
-                </a>
+</div>
 
 
-            </div>
+</div>
 
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
 
-<!-- =====================================================
-     FOOTER
-===================================================== -->
+<!-- FOOTER -->
 
 <footer>
 
-    <h3>
-        Vamsify Web & Digital Solutions
-    </h3>
+<strong>
+Vamsify Web & Digital Solutions
+</strong>
 
-    <p>
-        © 2026 Vamsify Web. All Rights Reserved.
-    </p>
+<p>
+© 2026 Vamsify Web. All Rights Reserved.
+</p>
 
 </footer>
 
 
 
-<!-- =====================================================
-     WHATSAPP
-===================================================== -->
+<!-- WHATSAPP -->
 
 <a href="https://wa.me/916305765198"
-   class="whatsapp"
-   target="_blank"
-   title="Chat with Vamsify Web">
+class="whatsapp"
+target="_blank"
+title="Contact Vamsify Web">
 
-    💬
+☎
 
 </a>
 
 
 </body>
-
 </html>
