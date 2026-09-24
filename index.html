@@ -37,10 +37,17 @@
     }
 
     .logo {
+      display:flex;
+      align-items:centre;
+      gap:10px;
       font-size: 24px;
       font-weight: bold;
       color: #21b6ff;
     }
+    .logo img{
+      width:45px;
+      height:45px;
+      object-fit: contain;
 
     nav a {
       color: white;
@@ -204,7 +211,10 @@
 <body>
 
 <header>
-  <div class="logo">Vamsify Web </div>
+  <div class="logo">
+    <img src="logo.png" alt="Vamsify Web logo">
+    <span> Vamsify Web</span>
+  </div>
 
   <nav>
     <a href="#home">Home</a>
